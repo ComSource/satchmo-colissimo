@@ -4,7 +4,7 @@
 
 ## Dependancies
 
-The only required dependancy is the [django-colissimo](https://github.com/matm/django-colissimo) module up-to-date with LaPoste Colissimo shipping rates. For more informations on how to update django-colissimo to `youryear` rates, please refer to the project page.
+Considering you have a properly configured (and working) satchmo project. The only required dependancy is the [django-colissimo](https://github.com/matm/django-colissimo) module up-to-date with LaPoste Colissimo shipping rates. For more informations on how to update django-colissimo to `youryear` rates, please refer to the project page.
 
 Most of the time, a simple:
 
