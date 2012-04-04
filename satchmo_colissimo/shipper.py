@@ -1,5 +1,5 @@
 """
-Colissimo from LaPoste (France) Shipping Module
+Colissimo from LaPoste (France) Shipping Module for Satchmo
 
 author: Julien Maupetit (twitter @julienmaupetit)
 """
@@ -11,10 +11,11 @@ from shipping.modules.base import BaseShipper
 from livesettings import config_get_group
 
 from colissimo.models import Recommanded, Rate
+from config import SHIP_MODULE_NAME
 
 import logging
 
-log = logging.getLogger('laposte_colissimo.shipper')
+log = logging.getLogger('satchmo_colissimo.shipper')
 
 class Shipper(BaseShipper):
 
@@ -81,7 +82,7 @@ class Shipper(BaseShipper):
         
         self.is_valid = False
 
-        settings = config_get_group( 'laposte_colissimo' )
+        settings = config_get_group( SHIP_MODULE_NAME )
         
         # Compute cart total weight
         total_weight = float(settings.BOX_DEFAULT_WEIGHT.value)
@@ -95,12 +96,12 @@ class Shipper(BaseShipper):
         
         rate = Rate()
         rs = rate.get_rates( contact.shipping_address.country.name, total_weight )
+        # Quick and dirty (enought for my customer...)
         level = settings.RECOMMANDED_DEFAULT_LEVEL.value
         if level > 5:
             level = 0
 
         log.debug( "Rates: %s - Level %s - Rate: %.2f (weight: %.2f price: %.2f)" % (str(rs), level, rs[ level ].price, total_weight, cart.total ) )
-        log.debug( "Shippable: %s" % ( cart.is_shippable ) )
         
         self.charges = Decimal( rs[ level ].price )
         

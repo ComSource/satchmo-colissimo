@@ -1,5 +1,5 @@
 """
-Colissimo from LaPoste (France) Shipping Module
+Colissimo from LaPoste (France) Shipping Module for Satchmo
 
 author: Julien Maupetit (twitter @julienmaupetit)
 """
