@@ -1,4 +1,4 @@
-# Django-Oscar - Flexible e-commerce on Django
+# Satchmo-Colissimo - Colissimo shipping module for satchmo projects
 
 *satchmo-colissimo* is a custom shipping module for [satchmo](http://www.satchmoproject.com/) [django](https://www.djangoproject.com/) e-commerce solution.
 
