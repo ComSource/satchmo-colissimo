@@ -10,7 +10,10 @@ Most of the time, a simple:
 
     pip install django-colissimo
 	
-will do the trick.
+will do the trick. If pip does not found the module on PyPI, use the
+github repository
+
+    pip install git+git://github.com/matm/django-colissimo
 
 ## Installation
 
