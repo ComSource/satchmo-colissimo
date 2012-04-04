@@ -58,7 +58,7 @@ To activate your custom shipping module, add `satchmo_colissimo` to your `CUSTOM
 	    'CUSTOM_SHIPPING_MODULES':['satchmo_colissimo'],
 	}
 
-Now go to your site settings (once logged in the django admin): in development mode it would be something like `http://localhost:8000/settings/`. Click on `Shipping settings` and select `Colissimo` as an activated shipping module. Then, update settings and a new configuration section will appear for [Colissimo shipping module](https://github.com/jmaupetit/satchmo-colissimo).
+Now go to your site settings (once logged in the django admin): in development mode it would be something like `http://127.0.0.1:8000/settings/`. Click on `Shipping settings` and select `Colissimo` as an activated shipping module. Then, `update settings` and a new configuration section will appear for [Colissimo shipping module](https://github.com/jmaupetit/satchmo-colissimo).
 
 ## Changelog
 
