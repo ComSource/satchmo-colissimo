@@ -1,10 +1,16 @@
-# Satchmo-Colissimo - Colissimo shipping module for satchmo projects
+# Satchmo-Colissimo
 
-*satchmo-colissimo* is a custom shipping module for [satchmo](http://www.satchmoproject.com/) [django](https://www.djangoproject.com/) e-commerce solution.
+**satchmo-colissimo** is a custom shipping module for [satchmo](http://www.satchmoproject.com/) [django](https://www.djangoproject.com/) e-commerce solution.
 
 ## Dependancies
 
 The only required dependancy is the [django-colissimo](https://github.com/matm/django-colissimo) module up-to-date with LaPoste Colissimo shipping rates. For more informations on how to update django-colissimo to `youryear` rates, please refer to the project page.
+
+Most of the time, a simple:
+
+    pip install django-colissimo
+	
+will do the trick.
 
 ## Installation
 
@@ -24,7 +30,8 @@ Now you need to create `colissimo` database scheme with
 This will also load colissimo rates in the db. If not, fetch initial data:
 
     mkdir data
-    wget https://raw.github.com/matm/django-colissimo/master/colissimo/fixtures/initial_data.json -O data/colissimo_initial_data.json
+    wget https://raw.github.com/matm/django-colissimo/master/colissimo/fixtures/initial_data.json \
+	  -O data/colissimo_initial_data.json
 	python manage.py loaddata data/colissimo_initial_data.json
 
 Now you need to install satchmo-colissimo from github, either by cloning the project of using pip.
@@ -48,7 +55,7 @@ To activate your custom shipping module, add `satchmo-colissimo` to your `CUSTOM
 	    'CUSTOM_SHIPPING_MODULES':['laposte_colissimo'],
 	}
 
-Now go to your site settings (once logged in the django admin): in development mode it would be something like `http://localhost:8000/settings/`. Click on `Shipping settings` and select `Colissimo` as an activated shipping module. Then, update settings and a new configuration section will appear for [Colissimo shipping module](/).
+Now go to your site settings (once logged in the django admin): in development mode it would be something like `http://localhost:8000/settings/`. Click on `Shipping settings` and select `Colissimo` as an activated shipping module. Then, update settings and a new configuration section will appear for [Colissimo shipping module](https://github.com/jmaupetit/satchmo-colissimo).
 
 ## Changelog
 
