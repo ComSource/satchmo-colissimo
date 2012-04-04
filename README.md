@@ -62,7 +62,7 @@ Now go to your site settings (once logged in the django admin): in development m
 
 ## Changelog
 
-* Initial release based on the django-colissimo module to 
+* Initial release based on the django-colissimo module 
 * Applies colissimo rates given a package weight, destination and recommanded level
 
 ## Roadmap
